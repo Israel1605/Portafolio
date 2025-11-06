@@ -1,0 +1,412 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+ /* Menu */
+.menu li{
+  float: right;
+  display: block;
+  margin: 0 25px;
+}
+.menu a{
+  font-size: 18px;
+  text-decoration: none;
+  color: black;
+  display: block;
+  position: relative;
+  padding-bottom: 3px;
+}
+
+.menu a::before{
+  content: "";
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  transition: 1.0s transform ease;
+  transform: scale3d(0,1,1);
+  transform-origin: 0 50%;
+}
+
+.menu{
+  padding: 25px 20px;
+  font-family:'Open Sans Condensed', sans-serif;
+}
+
+.menu a::before{
+  content: "";
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: #fff;
+  transition: 1.0s transform ease;
+  transform: scale3d(0,1,1);
+  transform-origin: 0 50%;
+}
+.menu a:hover::before{
+  transform: scale3d(1,1,1);
+  transform-origin: 50% 50%;
+  background: #8642d2;
+}
+
+/* Estilos de Textos */
+.texto-1{
+    color: #6b6969;
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+}
+
+span{
+  color: #8642d2;
+}
+
+
+/* Habilidades Informáticas */
+.skills-fondo{
+  width: 100%;
+  height: 100%;
+  padding-top: 35px;
+}
+
+.skills-titulo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.skills-titulo a{
+  text-align: center;
+  font-weight: bold;
+  
+}
+
+.skills-fondo h1{
+  font-family: 'Raleway', sans-serif;
+  font-size: 32px;
+  text-align: center;
+  margin-top: 5px ;
+}
+
+
+/* Sección de Ask U */
+.asku-fondo{
+  background-color: #636063;
+  width: 100%;
+  height: 600px;
+  margin-top: 20px;
+}
+
+.asku-area{
+  background-color: #fcf9ff;
+  width: 65%;
+  height: 600px;
+  margin-top: 20px;
+}
+
+.asku-texto{
+  width: 60%;
+  margin: 10px;
+  margin-left: 10%;
+  text-align: justify;
+}
+
+.titulo{
+  margin: 35px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 60px;
+  margin-left: 10%;
+}
+
+.circulos{
+  display: flex;
+  width:100%;
+  margin-top: 15px ;
+}
+
+.circulo{
+  height: 60px;
+  width: 60px;
+  border-radius: 100%;
+  margin: 10px;
+  background-color: #8642d2;
+}
+
+.circulo img{
+  position: absolute;
+  height: 60px;
+  width: 60px;
+}
+
+.asku-img {
+  width: 620px; /* Mantiene el ancho visual aproximado */
+  height: 260px;
+  max-width: 90%;
+  height: auto;
+  position: absolute;
+  margin-left: 52%;
+  margin-top: -25%;
+}
+
+.contenedor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.carrusel {
+  width: 100%;
+  max-width: 800px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  background-color: #000;
+}
+
+.diapositivas {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%;
+}
+
+.diapositiva {
+  flex: 0 0 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #222;
+}
+
+.diapositiva img,
+.diapositiva video {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+/* Botones del carrusel */
+.boton {
+  background: #8642d2;
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.boton:hover {
+  background: #6e34b0;
+  transform: scale(1.1);
+}
+
+/* Certificaciones*/
+.certificacion-contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: 100%;
+}
+
+.certi-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  color: #6b6969;
+  font-family: 'Raleway', sans-serif;;
+}
+
+.certi-item:hover {
+  transform: scale(1.08);
+}
+
+.certi-item h2 {
+  font-size: 30px;
+  margin-top: 10px;
+  transition: color 0.3s ease;
+}
+
+.certi-item svg .fondo {
+  transition: fill 0.3s ease;
+}
+
+.certi-item:hover svg .fondo {
+  fill: #8642d2 !important;
+}
+
+.certi-item:hover h2 {
+  color: #8642d2;
+}
+
+.popover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popover-content {
+  position: relative;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.popover img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.close-btn {
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  background-color: #ffffff;
+  color: #8642d2;
+  border: none;
+  border-radius: 50%;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+.close-btn:hover {
+  background-color: #8642d2;
+  color: #ffffff;
+  transform: rotate(90deg);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Sección de mis juegos */
+.juego-area{
+  display:flex;
+  margin-top: 5%;
+}
+
+.juego-img1{
+  width: 280px;
+  height: 300px;
+  margin: 5px;
+  margin-left: 3%;
+  border-radius: 20px;
+}
+
+.juego-img2{
+  width: 400px;
+  height: 300px;
+  background-image: url('/img/juegos/pokemon.png');
+  margin: 5px;
+  margin-right: 3%;
+  border-radius: 20px;
+}
+
+.juego-texto{
+  width: 35%;
+  text-align: justify;
+}
+
+.juego-texto h1{
+  font-size: 45px;
+  margin-left: -5px ;
+}
+
+/* Power Apps */
+.power-apps{
+  margin-top: 5%;
+  padding-bottom: 5%;
+  width: 100%;
+  background-color: #fcf9ff;
+  display: flex;
+}
+
+.item{
+  width: 50%;
+}
+
+.item img{
+  margin-top: 10%;
+  margin-left: 20%;
+  height: 600px;
+  width: 280px;
+}
+
+.item .a-posicion{
+ margin-left: -8%;
+ width: 90%;
+} 
+
+.item h1{
+  margin-left: -8%;
+}
+
+/* Footer */
+footer{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 230px;
+  background:  #1A1A1A;
+}
+
+.footer-seccion{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  color: #E6DDD8;
+  width: 33%;
+}
+
+.footer-seccion p, i{
+  color: #E6DDD8 !important;
+  font-family: Arial;
+}
+
+.footer-seccion img{
+  height: 100px;
+}
+
+.redes-sociales{
+  display: flex;
+  justify-content: center;
+}
+
+.redes-sociales img{
+  height: 40px;
+  width: 40px;
+  padding: 4%;
+  cursor: pointer;
+}
+
+
